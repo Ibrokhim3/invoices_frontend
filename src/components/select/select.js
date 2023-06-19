@@ -25,6 +25,7 @@ export const Select = ({
         id={inputId}
         {...field}
       >
+        <option value="">Select term</option>
         <option value="1">Net 1 Day</option>
         <option value="7">Net 7 Day</option>
         <option value="14">Net 14 Day</option>

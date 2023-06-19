@@ -42,6 +42,8 @@ export const EditInvoice = () => {
     });
   };
 
+  const trimId = id.slice(-6);
+
   return (
     <Container width={631}>
       <Sidebar />
@@ -62,7 +64,7 @@ export const EditInvoice = () => {
           mainButtonName={"Save changes"}
           formTitle={"Edit "}
           symbol={"#"}
-          invoiceId={id}
+          invoiceId={trimId}
           disabled={loading}
         ></InvoiceForm>
       </div>

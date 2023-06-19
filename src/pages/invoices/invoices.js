@@ -32,14 +32,6 @@ export const Invoices = () => {
       });
   }, [debauncedValue]);
 
-  // useEffect(() => {
-  //   axiosInstance
-  //     .get("invoices", { params: { paid_like: debauncedValue } })
-  //     .then((data) => {
-  //       dispath(invoicesActions.setList(data.data));
-  //     });
-  // }, [debauncedValue]);
-
   const handleSearchChange = (evt) => {
     setSearchValue(evt.target.value);
   };

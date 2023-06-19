@@ -11,7 +11,7 @@ export const Button = ({
   type = "submit",
   onClick,
   paid,
-  className
+  className,
 }) => {
   const btnColors = {
     grey: "#F9FAFE",
@@ -36,7 +36,7 @@ export const Button = ({
       disabled={disabled}
       type={type}
       style={{ margin, background: activeBackground, color }}
-      className={`button ${paid === true ? className : ""}`}
+      className={`button ${paid === true && className}`}
     >
       {children}
     </button>

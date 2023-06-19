@@ -20,10 +20,10 @@ export const InvoicesItem = ({
       </TextBold>
       <DarkGreyText width={"120px"} weight={500} margin={"0 auto 0 0"}>
         <LightGreyText>Due &nbsp;</LightGreyText>
-        {moment(due_date).format("DD/MMMM/YYYY")}
+        {moment(due_date).format("DD MMMM YYYY")}
       </DarkGreyText>
       <div className="invoice-item__text-wrapper">
-        <LightGreyText>{to}</LightGreyText>
+        <LightGreyText lineHeight={1.5}>{to}</LightGreyText>
       </div>
       <p className="invoices-item__price">
         <span className="invoices-item__currency">&pound; &nbsp;</span>

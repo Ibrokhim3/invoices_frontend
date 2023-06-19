@@ -58,7 +58,7 @@ export const InvoiceItem = () => {
     dispatch(invoicesActions.setLoading(true));
     axiosInstance
       .patch("invoices/" + id, newStatus)
-      .then(() => dispatch(invoicesActions.setPayingInvoice()));
+      .then(() => dispatch(invoicesActions.setPayingInvoice(!paidStatus)));
     dispatch(invoicesActions.setLoading(false));
   };
 
@@ -90,7 +90,7 @@ export const InvoiceItem = () => {
               <Button
                 onClick={handleDeleteClick}
                 type="button"
-                paid={paid}
+                // paid={paid}
                 disabled={loading}
                 color={"white"}
                 background={"red"}
@@ -153,7 +153,7 @@ export const InvoiceItem = () => {
               width={211}
               margin={"0 0 32px 0"}
               desc={"Invoice Date"}
-              info={moment(created_date).format("DD/MMMM/YYYY")}
+              info={moment(created_date).format("DD MMMM YYYY")}
             ></InvoiceInfo>
             <InvoiceInfo
               margin={"0 0 32px 0"}
@@ -166,11 +166,10 @@ export const InvoiceItem = () => {
               info={email}
             ></InvoiceInfo>
           </div>
-
           <InvoiceInfo
             margin={"0 0 50px 0"}
             desc={"Payment Due"}
-            info={moment(due_date).format("DD/MMMM/YYYY")}
+            info={moment(due_date).format("DD MMMM YYYY")}
           ></InvoiceInfo>
           <div className="invoice-item__footer">
             <p className="invoice-item__footer-text">Amount Due</p>

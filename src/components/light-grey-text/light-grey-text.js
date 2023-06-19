@@ -1,8 +1,8 @@
 import "./light-grey-text.css";
 
-export const LightGreyText = ({ margin, children }) => {
+export const LightGreyText = ({lineHeight, margin, children }) => {
   return (
-    <span style={{ margin }} className="light-grey-text">
+    <span style={{ margin, lineHeight: lineHeight}} className="light-grey-text">
       {children}
     </span>
   );

@@ -24,7 +24,7 @@ export const AddInvoice = () => {
       dueDate: value.dueDate,
       term: +value.paymentTerms,
       description: value.projectDescription,
-      price: value.price,
+      price: +value.price,
       createdDate: new Date().toISOString(),
     };
 

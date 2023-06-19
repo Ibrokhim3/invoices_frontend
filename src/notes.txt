@@ -22,3 +22,5 @@ video
 13dars sortlash 00 37 00
 
 --///13 dars 1video 00 53 00 navigate togirlash
+
+Delete refreshdan kegin ishlamayapti, chunki list null bolmoqda
