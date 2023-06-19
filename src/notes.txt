@@ -1,0 +1,24 @@
+Bugs:
+
+12. Due date xatosi
+13. Not foundni tog'ri sozlash (list.length)
+14. margin xatosi invoice item da tepada
+15. input width oxshamadi formda
+16. select width oxshamadi formda, class o'zgarishiga tog'ri keldi
+17. form width da muammo
+18. select style qilish kk
+19. catch bilan login xatosini chiqarish backend error 400 axios srazu catch
+20. Errorni component qilib qoyish
+21. Add ga login dan kegin otmayapti
+
+video
+
+12dars 2chi video 00 05 00 login pages ga shart berish
+
+12dars 2chi video 00 55 00 axios ishlatish POST
+
+12dars 3chi video 00 05 00 login user bolsa
+
+13dars sortlash 00 37 00
+
+--///13 dars 1video 00 53 00 navigate togirlash

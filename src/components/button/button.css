@@ -1,0 +1,20 @@
+.button{
+  padding: 17px 24px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  letter-spacing: -0.25px;
+  color: #7E88C3;
+  border-radius: 24px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+ 
+}
+
+.button:disabled{
+  opacity: 0.7;
+}
+
+.button--none{
+  display: none;
+}

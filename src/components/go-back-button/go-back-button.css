@@ -1,0 +1,9 @@
+.go-back-button{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+color: #0C0E16;
+margin-bottom: 41px;
+}
