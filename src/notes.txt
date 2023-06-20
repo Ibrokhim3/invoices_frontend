@@ -23,4 +23,5 @@ video
 
 --///13 dars 1video 00 53 00 navigate togirlash
 
-Delete refreshdan kegin ishlamayapti, chunki list null bolmoqda
+Bug: Delete refreshdan kegin ishlamayapti, chunki list null bolmoqda
+Bug: Date edit qvotkanda initial value qoyilmayapti 
