@@ -25,3 +25,7 @@ video
 
 Bug: Delete refreshdan kegin ishlamayapti, chunki list null bolmoqda
 Bug: Date edit qvotkanda initial value qoyilmayapti 
+
+like va buy - bug
+
+admin panelga kirganda ochmayapti refresh qimaguncha
