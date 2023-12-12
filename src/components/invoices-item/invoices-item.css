@@ -1,52 +1,99 @@
-.invoices-item{
+.invoices-item {
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px 16px 32px;
+  background: #ffffff;
+  box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+  border-radius: 8px;
+  margin: 0 0 16px 0; */
+}
+
+.invoices-item-link {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 16px 24px 16px 32px;
-  background: #FFFFFF;
-box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
-border-radius: 8px;
-margin: 0 0 16px 0;
+  background: #ffffff;
+  box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+  border-radius: 8px;
+  margin: 0 0 16px 0;
 }
 
+.invoices-item-left-wrapper {
+  display: flex;
+  align-items: center;
+}
 
-.invoices-item__due-date{
+.invoices-item-right-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.invoices-item__due-date {
   letter-spacing: -0.25px;
-  color: #7E88C3;
+  color: #7e88c3;
   margin: 0 0 0 43px;
-
 }
 
-.invoices-item__price{
-  font-weight: 700;
-font-size: 16px;
-line-height: 24px;
-text-align: right;
-letter-spacing: -0.8px;
-margin: 0;
-margin: 0 40px 0 0 ;
-color: #0C0E16;
-
-}
-
-.invoices-item__currency{
+.invoices-item__price {
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
-  color: #0C0E16;
+  text-align: right;
+  letter-spacing: -0.8px;
+  margin: 0;
+  margin: 0 40px 0 0;
+  color: #0c0e16;
 }
 
-.invoices-item__link{
-margin: 0 0 0 20px;
+.invoices-item__currency {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0c0e16;
 }
 
-.invoices-item__link-img{
+.invoices-item__link {
+  margin: 0 0 0 20px;
+}
+
+.invoices-item__link-img {
   transform: rotate(-90deg);
-
 }
 
-.invoice-item__text-wrapper{
+.invoice-item__text-wrapper {
   width: 140px;
-  margin-right: auto;
+  margin-left: 15px;
   text-align: left;
 }
 
+@media only screen and (max-width: 1110px) {
+  .invoice-item__text-wrapper {
+    width: 120px;
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .invoices-item-left-wrapper {
+    flex-direction: column;
+    align-items: start;
+    row-gap: 10px;
+  }
+
+  .invoices-item-right-wrapper {
+    flex-direction: column;
+    align-items: start;
+    row-gap: 10px;
+  }
+  .invoice-item__text-wrapper {
+    margin: 0;
+  }
+  .invoices-item__price {
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .invoices-item__link {
+    display: none;
+  }
+}

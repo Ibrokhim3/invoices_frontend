@@ -10,7 +10,14 @@ export const DarkGreyText = ({
 }) => {
   return (
     <span
-      style={{ fontWeight: weight, margin, color, display, width }}
+      style={{
+        fontWeight: weight,
+        margin,
+        color,
+        display,
+        width,
+        lineHeight: "normal",
+      }}
       className="dark-grey-text"
     >
       {children}

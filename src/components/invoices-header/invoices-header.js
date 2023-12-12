@@ -16,9 +16,9 @@ export const InvoicesHeader = ({ margin, onChange }) => {
         </p>
       </div>
       <div className="invoices__buttons">
-        <label className="invoices__filter-label" htmlFor="statusFilter">
+        {/* <label className="invoices__filter-label" htmlFor="statusFilter">
           {" "}
-        </label>
+        </label> */}
         <select
           onChange={onChange}
           id="statusFilter"
@@ -31,7 +31,7 @@ export const InvoicesHeader = ({ margin, onChange }) => {
             className="invoices__filter-label invoices__select-option"
             value="0"
           >
-            Filter by Status
+            Filter <span className="invoices__filter-text">by Status</span>
           </option>
           <option className="invoices__select-option" value="">
             All
@@ -50,7 +50,8 @@ export const InvoicesHeader = ({ margin, onChange }) => {
           }}
           className="invoices__button"
         >
-          <img src={plus}></img>New Invoice
+          <img style={{ marginRight: 5 }} src={plus}></img>New
+          <span className="invoices__button-span"> &nbsp;Invoice</span>
         </Link>
       </div>
     </div>

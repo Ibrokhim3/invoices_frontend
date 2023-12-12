@@ -10,15 +10,17 @@ export const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar__logo-background"></div>
-      <span className="sidebar__line"></span>
-      <div className="user-icon-wrapper">
-        <Link to={!user ? "login" : "/"}>
-          {user ? (
-            <img width={40} height={40} src={userIcon} alt="userIcon" />
-          ) : (
-            <img width={40} height={40} src={profileIcon} alt="userIcon" />
-          )}
-        </Link>
+      <div>
+        <span className="sidebar__line"></span>
+        <div className="user-icon-wrapper">
+          <Link to={!user ? "login" : "/"}>
+            {user ? (
+              <img width={40} height={40} src={userIcon} alt="userIcon" />
+            ) : (
+              <img width={40} height={40} src={profileIcon} alt="userIcon" />
+            )}
+          </Link>
+        </div>
       </div>
     </div>
   );

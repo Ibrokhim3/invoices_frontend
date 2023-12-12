@@ -1,73 +1,74 @@
-.invoices__header{
+.invoices__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 65px;
 }
 
-.invoices__title{
+.invoices__title {
   font-weight: 700;
-font-size: 32px;
-line-height: 36px;
-letter-spacing: -1px;
-margin: 0 0 8px 0;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -1px;
+  margin: 0 0 8px 0;
 }
 
-.invoices__subtitle{
-letter-spacing: -0.25px;
-color: #888EB0;
-margin: 0;
-text-align: left;
+.invoices__subtitle {
+  letter-spacing: -0.25px;
+  color: #888eb0;
+  margin: 0;
+  text-align: left;
+  line-height: normal;
 }
 
-.invoices__buttons{
+.invoices__buttons {
   display: flex;
   align-items: center;
   gap: 40px;
 }
 
-.invoices__filter-label{
+.invoices__filter-label {
   font-weight: 700;
-letter-spacing: -0.25px;
-
+  letter-spacing: -0.25px;
 }
 
-
-.invoices__button{
-  background: #7C5DFA;
+.invoices__button {
+  background: #7c5dfa;
   padding: 8px 15px 8px 8px;
-border-radius: 24px;
-font-weight: 700;
-letter-spacing: -0.25px;
-color: #FFFFFF;
-display: flex;
-align-items: center;
-border: none;
-gap: 16px;
-cursor: pointer;
-/* width: 100px */
-
-
+  border-radius: 24px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  border: none;
+  /* gap: 16px; */
+  cursor: pointer;
+  /* width: 100px */
 }
 
-.invoices__select{
+.invoices__button-span {
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  color: #ffffff;
+}
+
+.invoices__select {
   /* -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none; */
   background-color: rgba(red, green, blue, alpha);
   border: none;
   outline: none;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   display: flex;
   align-items: center;
   text-align: center;
   font-weight: 700;
   font-style: 20px;
- 
-  
 }
 
-.invoices__select::after{
+.invoices__select::after {
   content: "";
   background-image: url(../../assets/icons/arrow.svg);
   background-repeat: no-repeat;
@@ -78,8 +79,20 @@ cursor: pointer;
   height: 8px;
 }
 
-.invoices__select-option{
+.invoices__select-option {
   font-weight: 700;
   font-style: 20px;
+}
 
+@media only screen and (max-width: 668px) {
+  .invoices__button-span {
+    display: none;
+  }
+  .invoices__title {
+    font-size: 20px;
+  }
+
+  .invoices__filter-text {
+    display: none;
+  }
 }

@@ -20,16 +20,18 @@ export const Invoices = () => {
   const debauncedValue = useDebounce(searchValue, 500);
 
   useEffect(() => {
-    // if (!list) {
-    dispath(invoicesActions.setLoading(true));
-    axiosInstance
-      .get("invoices", { params: { paid_like: debauncedValue } })
-      .then((data) => {
-        dispath(invoicesActions.setList(data.data));
-      })
-      .catch(() => {
-        dispath(invoicesActions.setError(true));
-      });
+    if (!list) {
+      dispath(invoicesActions.setLoading(true));
+      axiosInstance
+        .get("invoices", { params: { paid_like: debauncedValue } })
+        .then((data) => {
+          console.log(data);
+          dispath(invoicesActions.setList(data.data));
+        })
+        .catch(() => {
+          dispath(invoicesActions.setError(true));
+        });
+    }
   }, [debauncedValue]);
 
   const handleSearchChange = (evt) => {
