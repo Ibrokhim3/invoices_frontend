@@ -21,6 +21,10 @@
   line-height: normal;
 }
 
+.invoices__subtitle-mobile {
+  display: none;
+}
+
 .invoices__buttons {
   display: flex;
   align-items: center;
@@ -30,6 +34,8 @@
 .invoices__filter-label {
   font-weight: 700;
   letter-spacing: -0.25px;
+  display: flex;
+  align-items: center;
 }
 
 .invoices__button {
@@ -92,7 +98,19 @@
     font-size: 20px;
   }
 
+  .invoices__filter-label {
+    margin-left: 15px;
+  }
+
   .invoices__filter-text {
+    color: white;
+  }
+
+  .invoices__subtitle {
     display: none;
+  }
+
+  .invoices__subtitle-mobile {
+    display: block;
   }
 }

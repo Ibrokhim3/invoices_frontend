@@ -155,22 +155,33 @@ export const InvoiceItem = () => {
               desc={"Invoice Date"}
               info={moment(created_date).format("DD MMMM YYYY")}
             ></InvoiceInfo>
-            <InvoiceInfo
-              margin={"0 0 32px 0"}
-              desc={"Bill To"}
-              info={to}
-            ></InvoiceInfo>
-            <InvoiceInfo
-              margin={"0 0 32px 0"}
-              desc={"Sent to"}
-              info={email}
-            ></InvoiceInfo>
+            <div className="invoice-item__bill-to-wrapper">
+              <InvoiceInfo
+                margin={"0 0 32px 0"}
+                desc={"Bill To"}
+                info={to}
+              ></InvoiceInfo>
+              <div className="invoice-item__email-wrapper">
+                <InvoiceInfo
+                  margin={"0 0 32px 0"}
+                  desc={"Sent to"}
+                  info={email}
+                ></InvoiceInfo>
+              </div>
+            </div>
           </div>
           <InvoiceInfo
             margin={"0 0 50px 0"}
             desc={"Payment Due"}
             info={moment(due_date).format("DD MMMM YYYY")}
           ></InvoiceInfo>
+          <div className="invoice-item__email-wrapper-mobile">
+            <InvoiceInfo
+              margin={"0 0 32px 0"}
+              desc={"Sent to"}
+              info={email}
+            ></InvoiceInfo>
+          </div>
           <div className="invoice-item__footer">
             <p className="invoice-item__footer-text">Amount Due</p>
             <p className="invoice-item__footer-price">&pound;&nbsp;{price}</p>

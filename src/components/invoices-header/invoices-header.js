@@ -14,35 +14,36 @@ export const InvoicesHeader = ({ margin, onChange }) => {
         <p className="invoices__subtitle">
           {list ? `There are ${list?.length} total invoices` : "No invoices"}
         </p>
+        <p className="invoices__subtitle invoices__subtitle-mobile">{`${list?.length} invoices`}</p>
       </div>
       <div className="invoices__buttons">
-        {/* <label className="invoices__filter-label" htmlFor="statusFilter">
-          {" "}
-        </label> */}
-        <select
-          onChange={onChange}
-          id="statusFilter"
-          name="statusFilter"
-          className="invoices__select"
-          defaultValue={"0"}
-        >
-          <option
+        <label className="invoices__filter-label" htmlFor="statusFilter">
+          Filter:
+          <select
+            onChange={onChange}
+            id="statusFilter"
+            name="statusFilter"
+            className="invoices__select"
+            defaultValue={"0"}
+          >
+            {/* <option
             disabled
             className="invoices__filter-label invoices__select-option"
             value="0"
           >
             Filter <span className="invoices__filter-text">by Status</span>
-          </option>
-          <option className="invoices__select-option" value="">
-            All
-          </option>
-          <option className="invoices__select-option" value="false">
-            Pending
-          </option>
-          <option className="invoices__select-option" value="true">
-            Paid
-          </option>
-        </select>
+          </option> */}
+            <option className="invoices__select-option" value="">
+              All
+            </option>
+            <option className="invoices__select-option" value="false">
+              Pending
+            </option>
+            <option className="invoices__select-option" value="true">
+              Paid
+            </option>
+          </select>
+        </label>
         <Link
           to={user ? "add-invoice" : "login"}
           state={{

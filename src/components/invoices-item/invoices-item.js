@@ -14,7 +14,7 @@ export const InvoicesItem = ({
 
   return (
     <li className="invoices-item">
-      <Link className="invoices-item-link">
+      <Link to={`invoice/${id}`} className="invoices-item-link">
         <div className="invoices-item-left-wrapper">
           <TextBold width={"27px"} margin={"0 45px 0 0"}>
             <DarkGreyText>#</DarkGreyText>

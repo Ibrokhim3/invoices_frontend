@@ -1,10 +1,8 @@
-.info-text{
+.info-text {
   margin: 0;
   font-weight: 700;
-font-size: 15px;
-line-height: 20px;
-letter-spacing: -0.3125px;
-color: #0C0E16;
-
-
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.3125px;
+  color: #0c0e16;
 }

@@ -1,18 +1,20 @@
-*, *::after, *::before{
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   font-family: "Spartan", sans-serif;
   font-size: 12px;
   line-height: 0.8;
   font-weight: 500;
-  color: #0C0E16;
+  color: #0c0e16;
 }
 
-body{
-  background-color: #F2F2F2;
+body {
+  background-color: #f2f2f2;
 }
 
-a{
-  text-decoration: none;  
+a {
+  text-decoration: none;
 }
 
 .visually-hidden {
@@ -25,84 +27,36 @@ a{
   width: 1px;
 }
 
-
-.loader,
-.loader:before,
-.loader:after {
-  border-radius: 50%;
-}
 .loader {
-  color: #4a4c87;
-  font-size: 11.4px;
-  text-indent: -99999em;
-  margin: 55px auto;
-  position: relative;
-  width: 10em;
-  height: 10em;
-  box-shadow: inset 0 0 0 1em;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-}
-.loader:before,
-.loader:after {
   position: absolute;
-  content: '';
+  top: calc(50% - 45px / 2);
+  left: calc(50% - 45px / 2);
+  width: 45px;
+  aspect-ratio: 1;
+  background: linear-gradient(
+        #0000 calc(1 * 100% / 6),
+        #000 0 calc(3 * 100% / 6),
+        #0000 0
+      )
+      left bottom,
+    linear-gradient(
+        #0000 calc(2 * 100% / 6),
+        #000 0 calc(4 * 100% / 6),
+        #0000 0
+      )
+      center bottom,
+    linear-gradient(
+        #0000 calc(3 * 100% / 6),
+        #000 0 calc(5 * 100% / 6),
+        #0000 0
+      )
+      right bottom;
+  background-size: 20% 600%;
+  background-repeat: no-repeat;
+  animation: l3 1s infinite linear;
 }
-.loader:before {
-  width: 5.2em;
-  height: 10.2em;
-  background: #F2F2F2;
-  border-radius: 10.2em 0 0 10.2em;
-  top: -0.1em;
-  left: -0.1em;
-  -webkit-transform-origin: 5.1em 5.1em;
-  transform-origin: 5.1em 5.1em;
-  -webkit-animation: load2 2s infinite ease 1.5s;
-  animation: load2 2s infinite ease 1.5s;
-}
-.loader:after {
-  width: 5.2em;
-  height: 10.2em;
-  background: #F2F2F2;
-  border-radius: 0 10.2em 10.2em 0;
-  top: -0.1em;
-  left: 4.9em;
-  -webkit-transform-origin: 0.1em 5.1em;
-  transform-origin: 0.1em 5.1em;
-  -webkit-animation: load2 2s infinite ease;
-  animation: load2 2s infinite ease;
-}
-@-webkit-keyframes load2 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
+@keyframes l3 {
   100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+    background-position: left top, center top, right top;
   }
 }
-@keyframes load2 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-.error{
-  text-align: center;
-  color: rgb(161, 69, 69);
-  font-size: 60px;
-  line-height: initial;
-  
-}
-
-
-
-
-

@@ -36,7 +36,7 @@ export const Invoices = () => {
     setSearchValue(evt.target.value);
   };
 
-  if (loading) return <p className="loader"></p>;
+  if (loading) return <div class="loader"></div>;
   if (error) return <p className="error">Something went wrong...</p>;
   if (list === undefined) return <NotFound />;
 
