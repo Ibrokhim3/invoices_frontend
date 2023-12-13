@@ -13,7 +13,10 @@ export const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
   const handleLoginSubmit = ({ email, password }) => {
+    setLoading(true);
     const user = {
       email: email,
       password: password,
@@ -24,12 +27,16 @@ export const Login = () => {
       .then((data) => {
         dispatch(userActions.setUser(data.data));
         axiosInstance.defaults.headers.Authorization = `Bearer ${data.data.accessToken}`;
+        navigate(location.state?.redirect || "/");
       })
-      .catch((err) => {
+      .catch(() => {
         setError("You entered the wrong password or email");
+      })
+      .finally(() => {
+        setLoading(false);
       });
 
-    if (user) return navigate(location.state?.redirect || "/");
+    // if (user) return navigate(location.state?.redirect || "/");
   };
 
   return (
@@ -63,7 +70,7 @@ export const Login = () => {
               ></Input>
               {error && <span style={{ color: "red" }}>{error}</span>}
               <div className="login__button-wrapper">
-                <Button background={"blue"} color="#FFFFFF">
+                <Button disabled={loading} background={"blue"} color="#FFFFFF">
                   Login
                 </Button>
               </div>

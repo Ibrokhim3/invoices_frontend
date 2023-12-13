@@ -35,7 +35,12 @@ export const Button = ({
       onClick={onClick}
       disabled={disabled}
       type={type}
-      style={{ margin, background: activeBackground, color }}
+      style={{
+        margin,
+        background: activeBackground,
+        color,
+        backgroundColor: `${disabled && "#00000080"}`,
+      }}
       className={`button ${paid === true && className}`}
     >
       {children}

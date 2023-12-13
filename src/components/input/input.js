@@ -9,6 +9,7 @@ export const Input = ({
   width,
   defaultValue,
   className = "",
+  inputStyle,
 }) => {
   const [field, { error }] = useField(name);
   return (
@@ -23,6 +24,7 @@ export const Input = ({
         <span className="input-error">{error}</span>
       </span>
       <input
+        style={inputStyle}
         defaultValue={defaultValue}
         id={inputId}
         name={name}

@@ -1,3 +1,6 @@
-.option{
+.select-wrapper {
+  width: 100%;
+}
+.option {
   font-size: 16px;
 }

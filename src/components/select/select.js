@@ -13,7 +13,11 @@ export const Select = ({
   return (
     <div style={{ width }} className="select-wrapper">
       <span className="input-span">
-        <label className="input-label" htmlFor={inputId}>
+        <label
+          style={error && { color: "#EC5757" }}
+          className="input-label"
+          htmlFor={inputId}
+        >
           {label}
         </label>
         <span className="input-error">{error}</span>

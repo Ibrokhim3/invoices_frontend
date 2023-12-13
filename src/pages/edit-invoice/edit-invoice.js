@@ -19,7 +19,8 @@ export const EditInvoice = () => {
   );
   const user = useSelector((state) => state.user.user);
 
-  const { to, email, dueDate, term, description, price, paid } = currentInvoice;
+  const { to, email, due_date, term, description, price, paid } =
+    currentInvoice;
 
   const handleEditSubmit = (value) => {
     const editedInvoice = {
@@ -53,7 +54,7 @@ export const EditInvoice = () => {
           initialValues={{
             clientsName: to,
             clientsEmail: email,
-            dueDate: dueDate,
+            dueDate: due_date,
             paymentTerms: +term,
             projectDescription: description,
             price: price,

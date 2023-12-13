@@ -51,11 +51,11 @@ export const InvoiceItem = () => {
   };
 
   const handlePatchClick = () => {
+    dispatch(invoicesActions.setLoading(true));
     const newStatus = {
       userId: user.id,
       paid: true,
     };
-    dispatch(invoicesActions.setLoading(true));
     axiosInstance
       .patch("invoices/" + id, newStatus)
       .then(() => dispatch(invoicesActions.setPayingInvoice(!paidStatus)));
