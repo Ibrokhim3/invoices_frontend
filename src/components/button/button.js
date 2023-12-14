@@ -37,13 +37,14 @@ export const Button = ({
       type={type}
       style={{
         margin,
-        background: activeBackground,
+        background: disabled ? "#00000080" : activeBackground,
         color,
-        backgroundColor: `${disabled && "#00000080"}`,
+        // background: `${disabled ? "#00000080"}`,
       }}
       className={`button ${paid === true && className}`}
     >
       {children}
+      {disabled && <div class="loader-btn"></div>}
     </button>
   );
 };

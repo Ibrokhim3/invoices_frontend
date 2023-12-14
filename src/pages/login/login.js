@@ -68,7 +68,9 @@ export const Login = () => {
                 type={"password"}
                 label={"Password"}
               ></Input>
-              {error && <span style={{ color: "red" }}>{error}</span>}
+              {error && (
+                <p style={{ marginBottom: 5, color: "red" }}>{error}</p>
+              )}
               <div className="login__button-wrapper">
                 <Button disabled={loading} background={"blue"} color="#FFFFFF">
                   Login

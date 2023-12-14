@@ -1,4 +1,6 @@
 .button {
+  display: flex;
+  gap: 5px;
   padding: 17px 24px;
   cursor: pointer;
   background-color: transparent;
