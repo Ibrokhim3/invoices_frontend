@@ -44,7 +44,10 @@ export const Invoices = () => {
     <Container>
       <Sidebar />
       <div className="invoices">
-        <InvoicesHeader onChange={handleSearchChange} />
+        <InvoicesHeader
+          searchValue={searchValue}
+          onChange={handleSearchChange}
+        />
         <ul className="invoices__list">
           {list?.map((item, index) => (
             <InvoicesItem key={index} item={item}></InvoicesItem>

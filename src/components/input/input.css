@@ -1,52 +1,50 @@
-.input{
-  background: #FFFFFF;
-border: 1px solid #DFE3FA;
-border-radius: 4px;
-padding: 16px 15.5px 16px 20px;
-font-weight: 700;
-font-size: 12px;
-line-height: 15px;
-letter-spacing: -0.25px;
-color: #0C0E16;
-outline: none;
-width: 100%;
-
-}
-
-.input:focus{
-  border-color: #9277FF;
-}
-
-.input-label{
+.input {
+  background: #ffffff;
+  border: 1px solid #dfe3fa;
+  border-radius: 4px;
+  padding: 16px 15.5px 16px 20px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
   letter-spacing: -0.25px;
-color: #7E88C3;
-
+  color: #0c0e16;
+  outline: none;
+  width: 100%;
+  min-width: 100%;
 }
 
-.input-span{
+.input:focus {
+  border-color: #9277ff;
+}
+
+.input-label {
+  letter-spacing: -0.25px;
+  color: #7e88c3;
+}
+
+.input-span {
   margin-bottom: 11px;
   display: flex;
   justify-content: space-between;
 }
 
-.input-wrapper{
+.input-wrapper {
   margin-bottom: 22px;
   width: 100%;
 }
 
-.input-date{
+.input-date {
   margin: 0;
 }
 
-.input-error{
-  color: #EC5757;
+.input-error {
+  color: #ec5757;
 }
 
-.input--error{
-  border-color: #EC5757;
+.input--error {
+  border-color: #ec5757;
 }
 
-.input-label--error{
-  color: #EC5757;
+.input-label--error {
+  color: #ec5757;
 }
-

@@ -3,7 +3,7 @@ import plus from "../../assets/icons/plus.svg";
 import { Link } from "react-router-dom";
 import "./invoices-header.css";
 
-export const InvoicesHeader = ({ margin, onChange }) => {
+export const InvoicesHeader = ({ margin, onChange, searchValue }) => {
   const list = useSelector((state) => state.invoices.list);
   const user = useSelector((state) => state.user.user);
 
@@ -24,15 +24,8 @@ export const InvoicesHeader = ({ margin, onChange }) => {
             id="statusFilter"
             name="statusFilter"
             className="invoices__select"
-            defaultValue={"0"}
+            value={searchValue}
           >
-            {/* <option
-            disabled
-            className="invoices__filter-label invoices__select-option"
-            value="0"
-          >
-            Filter <span className="invoices__filter-text">by Status</span>
-          </option> */}
             <option className="invoices__select-option" value="">
               All
             </option>
