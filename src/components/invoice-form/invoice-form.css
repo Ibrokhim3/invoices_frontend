@@ -28,6 +28,11 @@
   /* width: 100%; */
 }
 
+.select {
+  appearance: initial;
+  -webkit-appearance: initial;
+}
+
 .invoice-form__button-wrapper {
   display: flex;
   align-items: center;

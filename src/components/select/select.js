@@ -8,6 +8,7 @@ export const Select = ({
   width,
   name,
   defaultValue,
+  selectStyle
 }) => {
   const [field, { error }] = useField(name);
   return (
@@ -23,6 +24,7 @@ export const Select = ({
         <span className="input-error">{error}</span>
       </span>
       <select
+        style={selectStyle}
         defaultValue={defaultValue}
         className={`input ${error ? "input--error" : ""} ${className}`}
         name={name}

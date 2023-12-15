@@ -80,6 +80,7 @@ export const InvoiceForm = ({
               <Select
                 // defaultValue={term}
                 // width={"47.5%"}
+                // selectStyle={{ textIndent: 6, lineHeight: 48.8 }}
                 name="paymentTerms"
                 label={"Payment Terms"}
                 inputId={"paymentTermsId"}
