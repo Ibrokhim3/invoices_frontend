@@ -68,8 +68,6 @@ export const InvoiceForm = ({
             />
             <div className="form__selects-wrapper">
               <Input
-                // defaultValue={initialValues.due_date}
-                // width={"47.5%"}
                 inputStyle={{
                   height: 48.8,
                   appearence: "initial",
@@ -82,9 +80,10 @@ export const InvoiceForm = ({
                 className={"input-date"}
               />
               <Select
-                // defaultValue={term}
-                // width={"47.5%"}
-                // selectStyle={{ textIndent: 6, lineHeight: 48.8 }}
+                selectStyle={{
+                  appearence: "initial",
+                  WebkitAppearance: "initial",
+                }}
                 name="paymentTerms"
                 label={"Payment Terms"}
                 inputId={"paymentTermsId"}

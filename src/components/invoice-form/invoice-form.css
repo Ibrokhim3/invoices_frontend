@@ -28,10 +28,9 @@
   /* width: 100%; */
 }
 
-.select {
-  appearance: initial;
-  -webkit-appearance: initial;
-}
+/* .select {
+
+} */
 
 .invoice-form__button-wrapper {
   display: flex;
