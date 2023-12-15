@@ -10,9 +10,10 @@
   color: #0c0e16;
   outline: none;
   width: 100%;
+  /*For IOS Safari: 
   /* min-width: 100%; */
-  appearance: initial;
-  -webkit-appearance: initial;
+  /* appearance: initial;
+  -webkit-appearance: initial; */
 }
 
 .input:focus {

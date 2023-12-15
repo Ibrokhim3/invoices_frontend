@@ -70,7 +70,11 @@ export const InvoiceForm = ({
               <Input
                 // defaultValue={initialValues.due_date}
                 // width={"47.5%"}
-                inputStyle={{ height: 48.8 }}
+                inputStyle={{
+                  height: 48.8,
+                  appearence: "initial",
+                  WebkitAppearance: "initial",
+                }}
                 type={"date"}
                 label={"Due date"}
                 name="dueDate"
