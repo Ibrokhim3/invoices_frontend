@@ -44,7 +44,7 @@ export const Button = ({
       className={`button ${paid === true && className}`}
     >
       {children}
-      {disabled && <div class="loader-btn"></div>}
+      {disabled && <div className="loader-btn"></div>}
     </button>
   );
 };

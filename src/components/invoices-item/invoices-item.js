@@ -3,9 +3,9 @@ import { LightGreyText } from "../light-grey-text";
 import { PaymentStatus } from "../payment-status";
 import { TextBold } from "../text-bold";
 import { Link } from "react-router-dom";
-import arrow from "../../assets/icons/arrow.svg";
 import "./invoices-item.css";
 import moment from "moment";
+// import arrow from "../../assets/icons/arrow.svg";
 
 export const InvoicesItem = ({
   item: { id, userId, created_date, due_date, email, paid, price, term, to },
@@ -35,13 +35,13 @@ export const InvoicesItem = ({
           </p>
           <PaymentStatus paid={paid}></PaymentStatus>
           <div className="invoices-item__link">
-            <Link to={`invoice/${id}`}>
+            {/* <Link to={`invoice/${id}`}>
               <img
                 className="invoices-item__link-img"
                 src={arrow}
                 alt="arrow-button"
               />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </Link>

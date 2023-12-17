@@ -15,28 +15,27 @@ import "./invoices.css";
 export const Invoices = () => {
   const { list, loading, error } = useSelector((state) => state.invoices);
   const [searchValue, setSearchValue] = useState("");
-  const dispath = useDispatch();
+  const dispatch = useDispatch();
 
   const debauncedValue = useDebounce(searchValue, 500);
 
   useEffect(() => {
-    dispath(invoicesActions.setLoading(true));
+    dispatch(invoicesActions.setLoading(true));
     axiosInstance
       .get("invoices", { params: { paid_like: debauncedValue } })
       .then((data) => {
-        console.log(data);
-        dispath(invoicesActions.setList(data.data));
+        dispatch(invoicesActions.setList(data.data));
       })
       .catch(() => {
-        dispath(invoicesActions.setError(true));
+        dispatch(invoicesActions.setError(true));
       });
-  }, [debauncedValue]);
+  }, [dispatch, debauncedValue]);
 
   const handleSearchChange = (evt) => {
     setSearchValue(evt.target.value);
   };
 
-  if (loading) return <div class="loader"></div>;
+  if (loading) return <div className="loader"></div>;
   if (error) return <p className="error">Something went wrong...</p>;
   if (list === undefined) return <NotFound />;
 

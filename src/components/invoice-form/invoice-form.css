@@ -35,7 +35,7 @@
 .invoice-form__button-wrapper {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 @media only screen and (max-width: 668px) {
